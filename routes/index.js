@@ -29,4 +29,8 @@ router.get('/pods/:name/:namespace', (req, res, next) => {
   })
 });
 
+router.get('/health', (req, res, next) => {
+  res.status(200).send("healthy");
+});
+
 module.exports = router;
